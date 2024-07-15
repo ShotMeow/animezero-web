@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { Header } from "@/src/widgets/header";
+import { Header, Menu } from "@/src/widgets/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +13,11 @@ export const metadata: Metadata = {
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={inter.className}>
         <Header />
         {children}
+        <Menu className="lg:hidden" />
       </body>
     </html>
   );

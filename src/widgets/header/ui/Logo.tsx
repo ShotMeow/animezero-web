@@ -1,22 +1,34 @@
-import type { FC, PropsWithChildren } from "react";
+import type { AnchorHTMLAttributes, FC, PropsWithChildren } from "react";
 import Link from "next/link";
+import { clsx } from "clsx";
+
+const Mark: FC<PropsWithChildren> = ({ children }) => {
+  return <span className="text-purple">{children}</span>;
+};
 
 interface LogoExtensions {
-  Span: typeof LogoSpan;
+  Mark: typeof Mark;
 }
 
-const Logo: FC<PropsWithChildren> & LogoExtensions = ({ children }) => {
+interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+
+const Logo: FC<PropsWithChildren<Props>> & LogoExtensions = ({
+  children,
+  href = "/",
+  className,
+  ...props
+}) => {
   return (
-    <Link href="/" className="text-2xl [&>span]:text-purple font-semibold">
+    <Link
+      href={href}
+      className={clsx("text-2xl font-semibold [&>span]:text-purple", className)}
+      {...props}
+    >
       {children}
     </Link>
   );
 };
 
-const LogoSpan: FC<PropsWithChildren> = ({ children }) => {
-  return <span className="text-purple">{children}</span>;
-};
-
-Logo.Span = LogoSpan;
+Logo.Mark = Mark;
 
 export default Logo;

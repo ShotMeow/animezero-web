@@ -3,5 +3,26 @@
 @tailwind utilities;
 
 body {
-    @apply bg-black text-white container;
+  @apply bg-black text-white container;
+}
+
+/* Брендирование выделения текста */
+
+::selection {
+  @apply bg-purple text-white;
+}
+
+/* Стилизация скроллбара */
+
+*::-webkit-scrollbar {
+  @apply size-1;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-purple rounded-full;
 }

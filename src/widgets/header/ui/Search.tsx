@@ -1,16 +1,22 @@
-import type { FC } from "react";
+import type { FC, LabelHTMLAttributes } from "react";
 import { SearchIcon } from "lucide-react";
+import { clsx } from "clsx";
 
-const Search: FC = () => {
+interface Props extends LabelHTMLAttributes<HTMLLabelElement> {}
+
+const Search: FC<Props> = ({ className, ...props }) => {
   return (
-    <label className="h-10 flex items-center w-full">
+    <label
+      className={clsx("flex h-10 w-full items-center", className)}
+      {...props}
+    >
       <input
-        className="rounded-l-md h-full w-full px-6 placeholder:text-sm placeholder:text-zinc-500 text-black"
+        className="size-full rounded-l-md px-6 text-black placeholder:text-sm placeholder:text-zinc-500"
         type="text"
         title="Поиск"
         placeholder="Популярные новинки"
       />
-      <div className="bg-zinc-900 h-full rounded-r-md px-2 flex items-center justify-center cursor-pointer">
+      <div className="flex h-full cursor-pointer items-center justify-center rounded-r-md bg-zinc-900 px-2">
         <SearchIcon size={20} />
       </div>
     </label>
