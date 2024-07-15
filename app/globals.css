@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
 body {
   @apply bg-black text-white container;
 }

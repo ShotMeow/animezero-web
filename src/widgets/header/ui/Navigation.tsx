@@ -19,12 +19,15 @@ const Navigation: FC<Props> = ({ ...props }) => {
           <li key={item.url}>
             <Link
               href={item.url}
-              className={clsx("inline-block p-4 font-light", {
-                "bg-white/5 border-b-2 border-purple": urlPathnameIncluding(
-                  item.url,
-                  pathname,
-                ),
-              })}
+              className={clsx(
+                "inline-block border-purple p-4 font-light transition-colors",
+                {
+                  "bg-white/5 border-b-2": urlPathnameIncluding(
+                    item.url,
+                    pathname,
+                  ),
+                },
+              )}
             >
               {item.name}
             </Link>

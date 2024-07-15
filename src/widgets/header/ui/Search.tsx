@@ -11,7 +11,7 @@ const Search: FC<Props> = ({ className, ...props }) => {
       {...props}
     >
       <input
-        className="size-full rounded-l-md px-6 text-black placeholder:text-sm placeholder:text-zinc-500"
+        className="size-full rounded-l-md bg-zinc-900 px-6 font-light placeholder:text-sm placeholder:text-zinc-300"
         type="text"
         title="Поиск"
         placeholder="Популярные новинки"
