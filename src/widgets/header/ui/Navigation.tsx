@@ -19,7 +19,6 @@ const Navigation: FC<Props> = ({ className, ...props }) => {
           <li className="h-full" key={item.url}>
             <Link
               href={item.url}
-              scroll={false}
               className={clsx(
                 "inline-flex h-full items-center justify-center border-purple px-4 font-light transition-colors",
                 {

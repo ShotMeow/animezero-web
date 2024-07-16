@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { clsx } from "clsx";
 
-import "@/src/app/styles/globals.css";
+import "@/app/styles/globals.css";
 
 import { Header } from "@/widgets/header";
 import { Menu } from "@/widgets/menu";
@@ -22,7 +22,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
     <html lang="ru">
       <body className={clsx("flex flex-col justify-between", inter.className)}>
         <SocketProvider>
-          <div className="h-full">
+          <div>
             <Header />
             {children}
             <Menu className="lg:hidden" />

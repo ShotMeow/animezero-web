@@ -1,11 +1,12 @@
 import type { Metadata, NextPage } from "next";
+import { PrivacyPolicyScreen } from "@/screens/privacy-policy";
 
 export const metadata: Metadata = {
   title: "AnimeZero - Политика конфиденциальности",
 };
 
-const FilmsPage: NextPage = () => {
-  return <div></div>;
+const PrivacyPolicyPage: NextPage = () => {
+  return <PrivacyPolicyScreen />;
 };
 
-export default FilmsPage;
+export default PrivacyPolicyPage;

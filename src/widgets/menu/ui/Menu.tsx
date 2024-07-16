@@ -87,7 +87,6 @@ const Menu: FC<Props> = ({ className, ...props }) => {
           <li key={item.url}>
             <Link
               href={item.url}
-              scroll={false}
               className={clsx(
                 "flex w-36 items-center justify-center gap-2 rounded-full border-2 bg-zinc-900 p-4 font-light transition-transform duration-500 active:scale-95",
                 {

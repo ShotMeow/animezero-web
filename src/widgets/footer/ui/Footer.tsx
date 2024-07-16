@@ -14,9 +14,7 @@ const Footer: FC = () => {
           <ul className="ml-6 list-disc space-y-1 text-sm font-light text-zinc-300">
             {navigationLinksData.map((item) => (
               <li key={item.url}>
-                <Link href={item.url} scroll={false}>
-                  {item.name}
-                </Link>
+                <Link href={item.url}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -26,9 +24,7 @@ const Footer: FC = () => {
           <ul className="space-y-1 text-sm font-light text-zinc-300">
             {otherLinksData.map((item) => (
               <li key={item.url}>
-                <Link href={item.url} scroll={false}>
-                  {item.name}
-                </Link>
+                <Link href={item.url}>{item.name}</Link>
               </li>
             ))}
           </ul>

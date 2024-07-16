@@ -1,11 +1,12 @@
 import type { Metadata, NextPage } from "next";
+import { AboutUsScreen } from "@/screens/about-us";
 
 export const metadata: Metadata = {
   title: "AnimeZero - О проекте",
 };
 
-const FilmsPage: NextPage = () => {
-  return <div></div>;
+const AboutUsPage: NextPage = () => {
+  return <AboutUsScreen />;
 };
 
-export default FilmsPage;
+export default AboutUsPage;

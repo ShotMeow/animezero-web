@@ -2,18 +2,13 @@ import type { FC } from "react";
 import { Play } from "lucide-react";
 
 import Button from "@/shared/ui/Button";
+import TitleBlock from "@/shared/ui/TitleBlock";
 import { UsersCount } from "@/features/active-users-count";
 
 const Hero: FC = () => {
   return (
     <section className="flex h-[calc(100vh-64px)] items-center">
-      <div className="space-y-6">
-        <p className="text-zinc-400">
-          <span className="border-b-2 border-purple font-bold text-white">
-            Anime Zero
-          </span>{" "}
-          / Каталог
-        </p>
+      <TitleBlock breadcrumbs="Каталог">
         <h1 className="text-4xl">
           Смотрите онлайн <br /> фильмы на Anime
           <span className="text-purple">Zero</span>
@@ -28,7 +23,7 @@ const Hero: FC = () => {
           </Button>
           <UsersCount />
         </div>
-      </div>
+      </TitleBlock>
     </section>
   );
 };
