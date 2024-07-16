@@ -7,7 +7,7 @@ import ReleasedSoon from "./ReleasedSoon";
 
 const HomeScreen: FC = () => {
   return (
-    <main className="container">
+    <main>
       <Hero />
       <Novelties />
       <Recommendations />
