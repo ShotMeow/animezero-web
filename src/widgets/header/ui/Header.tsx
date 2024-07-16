@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes } from "react";
 import { DoorOpen } from "lucide-react";
 import { clsx } from "clsx";
 
-import Button from "@/src/shared/ui/Button";
+import Button from "@/shared/ui/Button";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import Search from "./Search";

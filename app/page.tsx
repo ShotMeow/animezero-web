@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { HomeScreen } from "@/src/screens/home";
+import { HomeScreen } from "@/screens/home";
 
 const HomePage: NextPage = () => {
   return <HomeScreen />;

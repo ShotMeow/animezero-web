@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
 
-import { navigationLinksData } from "@/src/shared/constants/navigationLinks.data";
-import urlPathnameIncluding from "@/src/shared/utils/urlPathnameIncluding";
+import { navigationLinksData } from "@/shared/constants/navigationLinks.data";
+import urlPathnameIncluding from "@/shared/utils/urlPathnameIncluding";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 

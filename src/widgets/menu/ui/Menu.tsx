@@ -11,8 +11,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search } from "lucide-react";
 
-import { navigationLinksData } from "@/src/shared/constants/navigationLinks.data";
-import urlPathnameIncluding from "@/src/shared/utils/urlPathnameIncluding";
+import { navigationLinksData } from "@/shared/constants/navigationLinks.data";
+import urlPathnameIncluding from "@/shared/utils/urlPathnameIncluding";
 import getIconFromNavItemName from "../utils/getIconFromNavItemName";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
@@ -35,6 +35,7 @@ const Menu: FC<Props> = ({ className, ...props }) => {
 
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+
       const isScrollingDown = prevScrollPos < currentScrollPos;
 
       setHide(isScrollingDown);
@@ -47,6 +48,12 @@ const Menu: FC<Props> = ({ className, ...props }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    searchInputShown
+      ? document.body.classList.add("overflow-clip")
+      : document.body.classList.remove("overflow-clip");
+  }, [searchInputShown]);
 
   return (
     <nav

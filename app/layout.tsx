@@ -3,10 +3,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { clsx } from "clsx";
 
-import "./globals.css";
-import { Header } from "@/src/widgets/header";
-import { Menu } from "@/src/widgets/menu";
-import { Footer } from "@/src/widgets/footer";
+import "@/src/app/styles/globals.css";
+
+import { Header } from "@/widgets/header";
+import { Menu } from "@/widgets/menu";
+import { Footer } from "@/widgets/footer";
+
+import { SocketProvider } from "@/features/active-users-count";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +21,14 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="ru">
       <body className={clsx("flex flex-col justify-between", inter.className)}>
-        <div className="h-full">
-          <Header />
-          {children}
-          <Menu className="lg:hidden" />
-        </div>
-        <Footer />
+        <SocketProvider>
+          <div className="h-full">
+            <Header />
+            {children}
+            <Menu className="lg:hidden" />
+          </div>
+          <Footer />
+        </SocketProvider>
       </body>
     </html>
   );

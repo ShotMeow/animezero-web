@@ -1,10 +1,10 @@
-import type { NavigationItemType } from "@/src/shared/types/navigationItem.types";
 import type { ReactElement } from "react";
+import type { NavigationItemType } from "../types/navigationItem.types";
 
-import Vk from "@/src/shared/assets/icons/vk.svg";
-import Tg from "@/src/shared/assets/icons/tg.svg";
-import Inst from "@/src/shared/assets/icons/inst.svg";
-import Mail from "@/src/shared/assets/icons/mail.svg";
+import Vk from "@/shared/assets/icons/vk.svg";
+import Tg from "@/shared/assets/icons/tg.svg";
+import Inst from "@/shared/assets/icons/inst.svg";
+import Mail from "@/shared/assets/icons/mail.svg";
 
 export const socialLinksData: (NavigationItemType & { icon: ReactElement })[] =
   [

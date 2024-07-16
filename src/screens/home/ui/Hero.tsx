@@ -1,7 +1,8 @@
 import type { FC } from "react";
-import Button from "@/src/shared/ui/Button";
 import { Play } from "lucide-react";
-import UsersCount from "./UsersCount";
+
+import Button from "@/shared/ui/Button";
+import { UsersCount } from "@/features/active-users-count";
 
 const Hero: FC = () => {
   return (

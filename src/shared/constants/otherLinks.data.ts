@@ -1,4 +1,4 @@
-import { NavigationItemType } from "@/src/shared/types/navigationItem.types";
+import type { NavigationItemType } from "../types/navigationItem.types";
 
 export const otherLinksData: NavigationItemType[] = [
   {
