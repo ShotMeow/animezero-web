@@ -8,13 +8,13 @@ body {
 }
 
 body {
-  @apply bg-black text-white container;
+  @apply bg-black text-white;
 }
 
 /* Брендирование выделения текста */
 
 ::selection {
-  @apply bg-purple text-white;
+  @apply bg-purple;
 }
 
 /* Стилизация скроллбара */

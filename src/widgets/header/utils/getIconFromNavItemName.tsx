@@ -1,7 +1,7 @@
 import type { NavigationItemType } from "../types/navigationItems.types";
 import { Clapperboard, Film, Library } from "lucide-react";
 
-const getIconFromNav = (navItem: NavigationItemType) => {
+const getIconFromNavItemName = (navItem: NavigationItemType) => {
   switch (navItem.name) {
     case "Каталог":
       return <Library />;
@@ -12,4 +12,4 @@ const getIconFromNav = (navItem: NavigationItemType) => {
   }
 };
 
-export default getIconFromNav;
+export default getIconFromNavItemName;

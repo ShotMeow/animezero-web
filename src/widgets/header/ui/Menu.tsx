@@ -7,7 +7,7 @@ import { Search } from "lucide-react";
 
 import { navigationItems } from "../constants/navigationItems.data";
 import urlPathnameIncluding from "../utils/urlPathnameIncluding";
-import getIconFromNav from "../utils/getIconFromNav";
+import getIconFromNavItemName from "../utils/getIconFromNavItemName";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -59,7 +59,7 @@ const Menu: FC<Props> = ({ className, ...props }) => {
                 },
               )}
             >
-              {getIconFromNav(item)}
+              {getIconFromNavItemName(item)}
               {item.name}
             </Link>
           </li>
