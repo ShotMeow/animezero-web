@@ -13,7 +13,7 @@ const Header: FC<Props> = ({ className, ...props }) => {
   return (
     <header
       className={clsx(
-        "sticky inset-x-0 top-0 mb-2 h-16 bg-black/50 backdrop-blur-md",
+        "sticky inset-x-0 top-0 z-50 mb-2 h-16 bg-black/50 backdrop-blur-md",
         className,
       )}
       {...props}
