@@ -21,6 +21,7 @@ const Logo: FC<PropsWithChildren<Props>> & LogoExtensions = ({
   return (
     <Link
       href={href}
+      scroll={false}
       className={clsx("text-2xl font-semibold [&>span]:text-purple", className)}
       {...props}
     >

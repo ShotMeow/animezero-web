@@ -1,21 +1,24 @@
 import type { FC, HTMLAttributes } from "react";
 import { DoorOpen } from "lucide-react";
+import { clsx } from "clsx";
 
 import Button from "@/src/shared/ui/Button";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import Search from "./Search";
-import { clsx } from "clsx";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Header: FC<Props> = ({ className, ...props }) => {
   return (
     <header
-      className={clsx("fixed inset-x-0 max-lg:py-4", className)}
+      className={clsx(
+        "sticky inset-x-0 top-0 h-16 bg-black/10 pb-2 backdrop-blur-md",
+        className,
+      )}
       {...props}
     >
-      <div className="container flex items-center gap-4 max-sm:justify-between">
+      <div className="container flex h-full items-center gap-4 max-sm:justify-between">
         <Logo>
           Anime<Logo.Mark>Zero</Logo.Mark>
         </Logo>

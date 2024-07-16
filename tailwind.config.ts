@@ -15,6 +15,15 @@ const config: Config = {
         black: "#040404",
         purple: "#643FFE",
       },
+      animation: {
+        show: "show 1s ease",
+      },
+      keyframes: {
+        show: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+      },
     },
   },
   plugins: [],

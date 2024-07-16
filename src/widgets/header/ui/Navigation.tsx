@@ -4,23 +4,24 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
 
-import { navigationItems } from "../constants/navigationItems.data";
-import urlPathnameIncluding from "../utils/urlPathnameIncluding";
+import { navigationLinksData } from "@/src/shared/constants/navigationLinks.data";
+import urlPathnameIncluding from "@/src/shared/utils/urlPathnameIncluding";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
-const Navigation: FC<Props> = ({ ...props }) => {
+const Navigation: FC<Props> = ({ className, ...props }) => {
   const pathname = usePathname();
 
   return (
-    <nav {...props}>
-      <ul className="flex items-center">
-        {navigationItems.map((item) => (
-          <li key={item.url}>
+    <nav className={clsx("h-full", className)} {...props}>
+      <ul className="flex h-full items-center">
+        {navigationLinksData.map((item) => (
+          <li className="h-full" key={item.url}>
             <Link
               href={item.url}
+              scroll={false}
               className={clsx(
-                "inline-block border-purple p-4 font-light transition-colors",
+                "inline-flex h-full items-center justify-center border-purple px-4 font-light transition-colors",
                 {
                   "bg-white/5 border-b-2": urlPathnameIncluding(
                     item.url,

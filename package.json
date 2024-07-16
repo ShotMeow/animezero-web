@@ -2,7 +2,7 @@
   "name": "animezero",
   "description": "Website release for online anime cinema developed on Next.js",
   "author": "Kai Goldman",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShotMeow/animezero.git"
@@ -27,6 +27,7 @@
     "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

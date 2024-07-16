@@ -5,7 +5,7 @@ import UsersCount from "./UsersCount";
 
 const Hero: FC = () => {
   return (
-    <section className="flex h-screen items-center">
+    <section className="flex h-[calc(100vh-64px)] items-center">
       <div className="space-y-6">
         <p className="text-zinc-400">
           <span className="border-b-2 border-purple font-bold text-white">
@@ -25,13 +25,7 @@ const Hero: FC = () => {
             <Play size={16} />
             Перейти к просмотру
           </Button>
-          <div className="flex items-center gap-4">
-            <div className="relative flex size-2 items-center justify-center">
-              <span className="absolute size-full rounded-full bg-purple" />
-              <span className="absolute -z-10 size-full animate-ping rounded-full bg-purple" />
-            </div>
-            <UsersCount />
-          </div>
+          <UsersCount />
         </div>
       </div>
     </section>

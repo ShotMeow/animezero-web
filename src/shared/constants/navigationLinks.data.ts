@@ -1,6 +1,6 @@
-import type { NavigationItemType } from "../types/navigationItems.types";
+import type { NavigationItemType } from "../types/navigationItem.types";
 
-export const navigationItems: NavigationItemType[] = [
+export const navigationLinksData: NavigationItemType[] = [
   {
     name: "Каталог",
     url: "/",
