@@ -14,7 +14,7 @@ body {
 /* Брендирование выделения текста */
 
 ::selection {
-  @apply bg-purple;
+  @apply bg-purple text-white;
 }
 
 /* Стилизация скроллбара */

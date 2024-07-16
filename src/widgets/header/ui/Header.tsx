@@ -11,7 +11,10 @@ interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Header: FC<Props> = ({ className, ...props }) => {
   return (
-    <header className={clsx("fixed w-full max-lg:py-4", className)} {...props}>
+    <header
+      className={clsx("fixed inset-x-0 max-lg:py-4", className)}
+      {...props}
+    >
       <div className="container flex items-center gap-4 max-sm:justify-between">
         <Logo>
           Anime<Logo.Mark>Zero</Logo.Mark>
