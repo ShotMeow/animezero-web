@@ -11,12 +11,12 @@ const Search: FC<Props> = ({ className, ...props }) => {
       {...props}
     >
       <input
-        className="size-full rounded-l-md bg-zinc-900 pl-6 pr-12 font-light placeholder:text-sm placeholder:text-zinc-300"
+        className="size-full rounded-md bg-zinc-900 pl-6 pr-12 font-light placeholder:text-sm placeholder:text-zinc-300"
         type="text"
         title="Поиск"
         placeholder="Популярные новинки"
       />
-      <div className="absolute right-0 flex h-full cursor-pointer items-center justify-center rounded-r-md bg-zinc-900 px-2">
+      <div className="absolute right-0 flex h-full cursor-pointer items-center justify-center rounded-md bg-zinc-900 px-2">
         <SearchIcon size={20} />
       </div>
     </label>
