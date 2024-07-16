@@ -1,5 +1,5 @@
-import type { NavigationItemType } from "@/src/shared/types/navigationItem.types";
 import { Clapperboard, Film, Library } from "lucide-react";
+import type { NavigationItemType } from "@/shared/types/navigationItem.types";
 
 const getIconFromNavItemName = (navItem: NavigationItemType) => {
   switch (navItem.name) {
